@@ -1,0 +1,19 @@
+{
+  "ts-node": {
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register"]
+  },
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["es5", "dom"],
+      "esModuleInterop": true,
+      "types": ["node"],
+      "rootDir": "../",
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./*"],
+        "~/*": ["./*"],
+      }
+    },
+    "include": ["./**/*.ts", "index.ts",],
+}

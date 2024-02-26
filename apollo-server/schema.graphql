@@ -1,0 +1,56 @@
+type Query {
+    me: User
+}
+
+type User {
+    id: ID!
+    name: String,
+    nick: String,
+    nickShort: String,
+    emailConfirmed: Boolean,
+    profileCompleted: Boolean,
+    locale: String,
+    email: String
+}
+
+type Project {
+    id: ID!
+    title: String,
+    sections: [Section],
+    fields: [Field],
+    createdAt: String,
+    updatedAt: String
+}
+
+type Section {
+    id: ID!
+    title: String,
+    tasks: [Task],
+    createdAt: String,
+    updatedAt: String
+}
+
+type Field {
+    id: ID!
+    title: String,
+    typeId: Int,
+    isStandard: Boolean,
+    sortIndex: Int
+}
+
+type Task {
+    id: ID!
+    title: String,
+    fieldValues: [FieldValue],
+    createdAt: String,
+    updatedAt: String,
+    isDone: Boolean
+}
+
+type FieldValue {
+    id: ID!
+    taskId: Int,
+    isStandard: Boolean,
+    fieldId: Int,
+    value: String
+}
